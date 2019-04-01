@@ -1,0 +1,21 @@
+import java.util.*;
+class F2_4
+{
+public static void main(String[] args)throws Exception
+{
+String str1="",str2;
+char a,b;
+Scanner reader=new Scanner(System.in);
+System.out.println("输入字符串:");
+str2=reader.nextLine();
+System.out.println("输入欲删除字符:");
+a=(char)System.in.read();
+for(int i=0;i<str2.length();i++)
+{
+b=str2.charAt(i);
+if(b!=a)
+str1=str1+b;
+}
+System.out.println("新字符串是:"+str1);
+}
+}
