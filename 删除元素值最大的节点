@@ -1,0 +1,16 @@
+void delmaxnode(LinkList *&L)
+{
+LinkList *p=L->next,*pre=L,*maxp=p,*maxpre=pre;
+while(p!=NULL)
+{
+if(maxp->data<p->data)
+{
+maxp=p;
+maxpre=pre;
+}
+p=p->next;
+pre=p;
+}
+maxpre->next=maxp->next;
+free(maxp);
+}
