@@ -1,0 +1,14 @@
+void CreatLinkListF(LinkList*&L,Elemtype a[],int n)
+{
+L=(LinkList*)malloc(sizeof(LinkList));
+L->next=NULL;
+int i;
+LinkList *s;
+for(i=0;i<n;i++)
+{
+s=(LinkList*)malloc(sizeof(LinkList));
+s->data=a[i];
+s->next=L->next;
+L->next=s;
+}
+}
