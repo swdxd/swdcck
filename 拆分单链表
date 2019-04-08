@@ -1,0 +1,19 @@
+void split(LinkList *&L,LinkList *&L1,LinkList *&L2)
+{
+LinkList *p=L->next,*q,*r1;
+L1=L;
+r1=L1;
+L2=(LinkList*)malloc(sizeof(LinkList));
+L2->next=NULL;
+while(p!=NULL)
+{
+r1->next=p;
+r1=p;
+p=p->next;
+q=p->next;
+p->next=L2->next;
+L2->next=p;
+p=q;
+}
+r1->next=NULL;
+}
